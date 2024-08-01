@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    {% block head %}
+    <title>{% block title %}{% endblock title %}</title>
+    {% endblock head %}
+
+    <link rel="stylesheet" type="text/css" href="/static/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/not_found.css" />
+</head>
+
+<body class="base-body">
+    <div class="base-container">
+        <div>
+            <div class="base-header">{% block header %}{% endblock header %}</div>
+
+            {% include "nav.html" %}
+
+            <main class="base-content">
+                {% block content %}{% endblock content %}
+            </main>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 by Jan Tumpa</p>
+            <a href="https://x.com/jan_tumpa" target="_blank">twitter</a>
+            <a href="https://github.com/tumpa02" target="_blank">github</a>
+        </div>
+    </div>
+</body>
+
+</html>
