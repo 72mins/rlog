@@ -1,5 +1,6 @@
 use actix_web::{get, web, HttpResponse, Responder};
 use serde::{Deserialize, Serialize};
+
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Frontmatter {
     title: String,
