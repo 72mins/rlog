@@ -29,6 +29,9 @@ pub fn start_server(listener: TcpListener) -> Result<Server, std::io::Error> {
             .wrap(middleware::Logger::default())
             .service(Files::new("/static", "static/").use_last_modified(true))
             .service(handlers::index)
+            .service(handlers::about)
+            .service(handlers::blog)
+            .service(handlers::blog_post)
             .default_service(web::route().to(handlers::not_found))
     })
     .listen(listener)?

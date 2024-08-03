@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}{{ meta.title }}{% endblock title %}
+
+{% block header %}
+<h1>{{ meta.title }}</h1>
+{% endblock header %}
+
+{% block content %}
+{{ post | safe }}
+{% endblock content %}
