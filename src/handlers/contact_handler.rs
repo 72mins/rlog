@@ -1,10 +1,10 @@
 use actix_web::{get, web, HttpResponse, Responder};
 
-#[get("/")]
-pub async fn index(templates: web::Data<tera::Tera>) -> impl Responder {
+#[get("/contact")]
+pub async fn contact(templates: web::Data<tera::Tera>) -> impl Responder {
     let context = tera::Context::new();
 
-    match templates.render("home.html", &context) {
+    match templates.render("contact.html", &context) {
         Ok(s) => HttpResponse::Ok().content_type("text/html").body(s),
         Err(e) => {
             println!("{:?}", e);

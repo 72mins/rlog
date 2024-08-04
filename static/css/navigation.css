@@ -3,12 +3,11 @@
     gap: 2rem;
 }
 
-.nav-item {
-    text-decoration: none;
-    color: #306cba;
+.nav-item:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+}
 
-    &:hover {
-        text-decoration: underline;
-        text-underline-offset: 0.4em;
-    }
+.nav-divider {
+    margin-top: 1rem;
 }
