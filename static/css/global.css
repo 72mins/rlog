@@ -6,6 +6,12 @@
     color: #d4d4d4;
 }
 
+@media (max-width: 720px) {
+    * {
+        font-size: 14px;
+    }
+}
+
 hr {
     border-color: #363636;
 }
@@ -68,6 +74,13 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+@media (max-width: 720px) {
+    .base-container {
+        width: 100%;
+        padding: 0 2rem;
+    }
 }
 
 .base-header {
