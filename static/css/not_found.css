@@ -1,9 +1,9 @@
 .not-found-body {
-    font-family: Verdana, sans-serif;
+    font-family: 'Space Mono', monospace;
     margin: 0;
     padding: 0;
-    background-color: #f5e1eb;
-    color: #363636;
+    background-color: #121212;
+    color: #d4d4d4;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +13,7 @@
 
 .go-back {
     text-decoration: none;
-    color: #306cba;
+    color: #61ABFF;
 
     &:hover {
         text-decoration: underline;
