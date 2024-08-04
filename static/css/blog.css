@@ -1,7 +1,7 @@
 .post-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 
 }
 
@@ -17,5 +17,5 @@
 }
 
 .post a {
-    line-height: 0;
+    line-height: 1.5;
 }
