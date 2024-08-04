@@ -32,6 +32,7 @@ pub fn start_server(listener: TcpListener) -> Result<Server, std::io::Error> {
             .service(handlers::about)
             .service(handlers::blog)
             .service(handlers::blog_post)
+            .service(handlers::contact)
             .default_service(web::route().to(handlers::not_found))
     })
     .listen(listener)?

@@ -4,6 +4,10 @@
 }
 
 .nav-item:hover {
-        text-decoration: underline;
-        text-underline-offset: 0.4em;
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+}
+
+.nav-divider {
+    margin-top: 1rem;
 }
