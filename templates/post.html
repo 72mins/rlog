@@ -1,11 +1,18 @@
 {% extends "base.html" %}
 
-{% block title %}{{ meta.title }}{% endblock title %}
+{% block head %}
+<title>{{ meta.title }}</title>
+<link rel="stylesheet" type="text/css" href="/static/css/markdown.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/post.css" />
+{% endblock head %}
 
 {% block header %}
 <h1>{{ meta.title }}</h1>
 {% endblock header %}
 
 {% block content %}
+<div class="breadcrumbs">
+    <a href="/">Home</a> &gt; <a href="/blog">Blog</a> &gt; {{ meta.title }}
+</div>
 {{ post | safe }}
 {% endblock content %}

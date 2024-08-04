@@ -1,20 +1,22 @@
 {% extends "base.html" %}
 
 {% block head %}
+<title>Blog</title>
 <link rel="stylesheet" type="text/css" href="/static/css/blog.css" />
 {% endblock head %}
-
-{% block title %}Blog{% endblock title %}
 
 {% block header %}
 <h1>blog</h1>
 {% endblock header %}
 
 {% block content %}
+
+<div class="post-container">
 {% for post in posts %}
 <div class="post">
-    <p>{{ post.posted_at }}</p>
+    <p>{{ post.posted_at }}</p> //
     <a href="/blog/{{ post.file_name }}">{{ post.title }}</a>
 </div>
 {% endfor %}
+</div>
 {% endblock content %}
