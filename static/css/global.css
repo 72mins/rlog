@@ -2,8 +2,12 @@
     font-family: 'Space Mono', monospace;
     margin: 0;
     padding: 0;
-    background-color: #fdfcff;
-    color: #363636;
+    background-color: #121212;
+    color: #d4d4d4;
+}
+
+hr {
+    border-color: #363636;
 }
 
 h1 {
@@ -40,7 +44,7 @@ p {
 
 a {
     text-decoration: none;
-    color: #306cba;
+    color: #61ABFF;
 
     &:hover {
         text-decoration: underline;
