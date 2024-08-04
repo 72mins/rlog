@@ -3,6 +3,7 @@
 {% block head %}
 <title>{{ meta.title }}</title>
 <link rel="stylesheet" type="text/css" href="/static/css/markdown.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/post.css" />
 {% endblock head %}
 
 {% block header %}
@@ -10,5 +11,8 @@
 {% endblock header %}
 
 {% block content %}
+<div class="breadcrumbs">
+    <a href="/">Home</a> &gt; <a href="/blog">Blog</a> &gt; {{ meta.title }}
+</div>
 {{ post | safe }}
 {% endblock content %}
