@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}{{ meta.title }}{% endblock title %}
+{% block head %}
+<title>{{ meta.title }}</title>
+<link rel="stylesheet" type="text/css" href="/static/css/markdown.css" />
+{% endblock head %}
 
 {% block header %}
 <h1>{{ meta.title }}</h1>

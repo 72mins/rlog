@@ -1,0 +1,19 @@
+code {
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-size: 0.9em;
+    background-color: #1e1e1e;
+    padding: 1rem;
+    display: block;
+}
+
+hr {
+    border-color: #363636;
+    margin: 1rem 0;
+}
+
+blockquote {
+    border-left: 4px solid #61ABFF;
+    padding: 0 1rem;
+    margin: 1rem 0;
+}
+
