@@ -1,0 +1,4 @@
+[host]/about
+[host]/contact
+[host]/blog
+[host]/blog/sample-post
