@@ -1,5 +1,6 @@
 use actix_files::Files;
-use actix_web::{dev::Server, middleware, web, App, HttpServer};
+use actix_web::{dev::Server, get, middleware, web, App, HttpResponse, HttpServer};
+use std::fs;
 use std::net::TcpListener;
 use tera::Tera;
 
@@ -22,6 +23,22 @@ lazy_static! {
     };
 }
 
+#[get("/robots.txt")]
+async fn robots_txt() -> HttpResponse {
+    match fs::read_to_string("./static/robots.txt") {
+        Ok(contents) => HttpResponse::Ok().content_type("text/plain").body(contents),
+        Err(_) => HttpResponse::NotFound().finish(),
+    }
+}
+
+#[get("sitemap.txt")]
+async fn sitemap_txt() -> HttpResponse {
+    match fs::read_to_string("./static/sitemap.txt") {
+        Ok(contents) => HttpResponse::Ok().content_type("text/plain").body(contents),
+        Err(_) => HttpResponse::NotFound().finish(),
+    }
+}
+
 pub fn start_server(listener: TcpListener) -> Result<Server, std::io::Error> {
     let server: Server = HttpServer::new(move || {
         App::new()
@@ -33,6 +50,8 @@ pub fn start_server(listener: TcpListener) -> Result<Server, std::io::Error> {
             .service(handlers::blog)
             .service(handlers::blog_post)
             .service(handlers::contact)
+            .service(robots_txt)
+            .service(sitemap_txt)
             .default_service(web::route().to(handlers::not_found))
     })
     .listen(listener)?
