@@ -6,6 +6,7 @@ use std::{fs, io::Error};
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Post {
     title: String,
+    description: String,
     file_name: String,
     posted_at: String,
 }

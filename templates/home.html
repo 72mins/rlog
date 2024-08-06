@@ -1,6 +1,9 @@
 {% extends "base.html" %} 
 
-{% block title %}Home{% endblock title %}
+{% block head %}
+<title>Home</title>
+<meta name="description" content="rlog - a minimalistic blog/portfolio starter" />
+{% endblock head %}
 
 {% block header %}
 <h1>home</h1>
@@ -8,7 +11,7 @@
 
 {% block content %}
 <p>
-    Welcome to <span><a href="https://github.com/tumpa02/rlog" target="_blank">rlog</a></span>,
+    Welcome to <span><a rel="nofollow" href="https://github.com/tumpa02/rlog" target="_blank">rlog</a></span>,
     a minimalistic blog/portfolio starter.
 </p>
 <p>
@@ -28,6 +31,6 @@
     project as lightweight and performant as possible.
 </p>
 <p>
-    This project was inspired by <span><a href="https://bearblog.dev/" target="_blank">bearblog</a></span>, a similar project written in Django. Credit where credit is due.
+    This project was inspired by <span><a rel="nofollow" href="https://bearblog.dev/" target="_blank">bearblog</a></span>, a similar project written in Django. Credit where credit is due.
 </p>
 {% endblock content %}
