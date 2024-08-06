@@ -1189,22 +1189,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d231b230927b5e4ad203db57bbcbee2802f6bce620b1e4a9024a07d94e2907ec"
 
 [[package]]
-name = "port-blog"
-version = "0.1.0"
-dependencies = [
- "actix-files",
- "actix-web",
- "env_logger",
- "ignore",
- "lazy_static",
- "pulldown-cmark",
- "serde",
- "serde_json",
- "tera",
- "toml",
-]
-
-[[package]]
 name = "powerfmt"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1328,6 +1312,22 @@ name = "regex-syntax"
 version = "0.8.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7a66a03ae7c801facd77a29370b4faec201768915ac14a721ba36f20bc9c209b"
+
+[[package]]
+name = "rlog"
+version = "1.0.0"
+dependencies = [
+ "actix-files",
+ "actix-web",
+ "env_logger",
+ "ignore",
+ "lazy_static",
+ "pulldown-cmark",
+ "serde",
+ "serde_json",
+ "tera",
+ "toml",
+]
 
 [[package]]
 name = "rustc-demangle"
