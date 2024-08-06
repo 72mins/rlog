@@ -40,6 +40,9 @@ This will create an executable in the `target/release` directory, which you can 
 ./target/release/rlog
 ```
 
+You will have to move the `rlog` executable to the root of the project, so it has access to the `posts`,
+`templates` and `static` directories.
+
 To host the project on a server, you will need to configure a reverse proxy to forward requests to the
 service running the project. I will not go into detail on how to do this, as it is out of the scope of this
 project. Creating, running and hosting a service is not unique to rlog.
