@@ -11,6 +11,21 @@
     height: 100dvh;
 }
 
+.not-found-container {
+    width: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 720px) {
+    .not-found-container {
+        width: 95%;
+    }
+}
+
 .go-back {
     text-decoration: none;
     color: #61ABFF;
