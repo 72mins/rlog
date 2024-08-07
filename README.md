@@ -18,6 +18,9 @@ project's development.
 
 Rlog is a self-hosted project, meaning that you will need to host it on your own server.
 
+
+### Without Docker
+
 To build the project, you will need to have Rust installed on your machine.
 
 To run the project, run the following command:
@@ -42,6 +45,22 @@ This will create an executable in the `target/release` directory, which you can 
 
 You will have to move the `rlog` executable to the root of the project, so it has access to the `posts`,
 `templates` and `static` directories.
+
+
+### With Docker
+
+Rlog can also be run using Docker. The Dockerfile and docker-compose.yml files are already provided in 
+the project. All that is needed to run the project is to build the Docker image and run the container,
+using the following command:
+
+```bash
+docker-compose up -d
+```
+
+This will start a container running the project on `localhost:8080`.
+
+
+### Additional notes
 
 To host the project on a server, you will need to configure a reverse proxy to forward requests to the
 service running the project. I will not go into detail on how to do this, as it is out of the scope of this
