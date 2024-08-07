@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  rlog:
+    container_name: rlog
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8080:8080"
