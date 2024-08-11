@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
 {% block head %}
-<title>Blog</title>
-<meta name="description" content="rlog - a minimalistic blog/portfolio starter" />
+<title>{{ meta.title }}</title>
+<meta name="description" content="{{ meta.description }}" />
 <link rel="stylesheet" type="text/css" href="/static/css/blog.css" />
 {% endblock head %}
 
 {% block header %}
-<h1>blog</h1>
+<h1>{{ meta.navtitle }}</h1>
 {% endblock header %}
 
 {% block content %}
