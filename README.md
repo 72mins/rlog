@@ -81,8 +81,28 @@ The blog page is the only dynamic page in the project, as it reads the blog post
 and parses, formats and displays them on the page.
 
 
-## How it works
+## Using the blog
+
+### Pages
+
+Each of the pages in the project are stored in the `templates` directory. Each page is a directory containing
+a `content.md` file, a `[page].html` file and an `meta.toml` file.
+
+The only thing you need to edit to customize the page is the `content.md` file, which is going to be the actual
+markdown content shown on the page.
+
+You can also edit the browser title, meta description and navigation title in the `meta.toml` file.
+
+### Posts
 
 The blog posts are written in markdown, while their metadata is stored in a TOML file. You will find an example
 of a blog post in the `posts` directory. The metadata file is used to store the title, slug and date of a blog post,
 while the markdown file has the actual content of the post.
+
+### Images
+
+Images can be used in any of the markdown files. To use an image, you can use a URL of an image hosted online,
+but it is not recommended.
+
+The best way to use an image in a post or page is to store the image in the `static/assets` directory and reference
+it in the markdown file.
