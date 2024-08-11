@@ -1,5 +1,9 @@
 use std::net::TcpListener;
 use rlog::start_server;
+use std::alloc::System;
+
+#[global_allocator]
+static A: System = System;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
