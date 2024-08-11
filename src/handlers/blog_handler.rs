@@ -3,6 +3,8 @@ use ignore::WalkBuilder;
 use serde::{Deserialize, Serialize};
 use std::{fs, io::Error};
 
+use crate::utils::extract_meta::extract_meta;
+
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Post {
     title: String,
@@ -76,7 +78,19 @@ pub async fn blog(templates: web::Data<tera::Tera>) -> impl Responder {
 
     context.insert("posts", &posts);
 
-    match templates.render("blog.html", &context) {
+    let meta = match extract_meta("templates/blog/meta.toml") {
+        Ok(m) => m,
+        Err(e) => {
+            println!("{:?}", e);
+
+            return HttpResponse::InternalServerError()
+                .content_type("text/html")
+                .body("<p>Something went wrong!</p>");
+        }
+    };
+    context.insert("meta", &meta);
+
+    match templates.render("blog/blog.html", &context) {
         Ok(s) => HttpResponse::Ok().content_type("text/html").body(s),
         Err(s) => {
             println!("{:?}", s);

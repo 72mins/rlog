@@ -4,6 +4,7 @@ use std::fs;
 use std::net::TcpListener;
 use tera::Tera;
 
+pub mod utils;
 pub mod handlers;
 
 #[macro_use]

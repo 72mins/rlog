@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
 
 {% block head %}
 <title>{{ meta.title }}</title>
@@ -6,9 +6,9 @@
 {% endblock head %}
 
 {% block header %}
-<h1>{{ meta.title }}</h1>
+<h1>{{ meta.navtitle }}</h1>
 {% endblock header %}
 
 {% block content %}
-{{ post | safe }}
+{{ content | safe }}
 {% endblock content %}
