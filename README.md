@@ -1,15 +1,22 @@
+<div align="center">
+
 # rlog
 
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+<img alt="rlog" width="1000" src="https://github.com/72mins/rlog/blob/dev/docs/splash.png">
+
+</div>
+
+<br />
+
 Rlog is a minimalistic blog/portfolio starter project intended to be used for a personal blog.
-
 The project is built using only Rust, HTML and CSS as to remain as lightweight and performant as possible.
-
 
 ## Inspiration
 
 Rlog was inspired by [Bearblog](https://bearblog.dev/), a similar project written in Django. If you're looking
 for a blog that you can edit online, definitely use Bearblog.
-
 
 ## Usage
 
@@ -17,7 +24,6 @@ If you wish to use rlog for your own blog, it is recommended to fork the project
 project's development.
 
 Rlog is a self-hosted project, meaning that you will need to host it on your own server.
-
 
 ### Without Docker
 
@@ -46,7 +52,6 @@ This will create an executable in the `target/release` directory, which you can 
 You will have to move the `rlog` executable to the root of the project, so it has access to the `posts`,
 `templates` and `static` directories.
 
-
 ### With Docker
 
 Rlog can also be run using Docker. The Dockerfile and docker-compose.yml files are already provided in 
@@ -58,7 +63,6 @@ docker-compose up -d
 ```
 
 This will start a container running the project on `localhost:8080`.
-
 
 ### Additional notes
 
@@ -79,7 +83,6 @@ Currently, there are 4 distinct pages in the project:
 
 The blog page is the only dynamic page in the project, as it reads the blog posts from a `posts` directory
 and parses, formats and displays them on the page.
-
 
 ## Using the blog
 
