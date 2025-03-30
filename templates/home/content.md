@@ -1,4 +1,4 @@
-Welcome to [rlog](https://github.com/tumpa02/rlog), a minimalistic blog/portfolio starter.
+Welcome to [rlog](https://github.com/72mins/rlog), a minimalistic blog/portfolio starter.
 
 The vision for this project is to provide a simple, fast, bloat-less and optimized starting point for a blog/portfolio website.
 
